@@ -11,6 +11,7 @@ import { createBooking } from "../../utils/networkCall"
 const BookingForm: React.FunctionComponent<{}> = () => {
   const { airports }: any = useSelector((store: RootState) => store.airports)
   const { error }: any = useSelector((store: RootState) => store.bookings)
+  const [notification, setNotification] = useState<string>("")
   const [formError, setFormError] = useState<string | undefined>(undefined)
   const [firstName, setFirstName] = useState<string>("")
   const [lastName, setLastName] = useState<string>("")
@@ -18,6 +19,16 @@ const BookingForm: React.FunctionComponent<{}> = () => {
   const [departureDate, setDepartureDate] = useState<string>("")
   const [departureAirportId, setDepartureAirportId] = useState<number>(1)
   const [arrivalAirportId, setArrivalAirportId] = useState<number>(1)
+
+  formError &&
+    setTimeout(() => {
+      setFormError("")
+    }, 2000)
+
+  notification &&
+    setTimeout(() => {
+      setNotification("")
+    }, 2000)
 
   const onChangeHandlers = [
     { name: "firstName", handler: setFirstName },
@@ -49,7 +60,14 @@ const BookingForm: React.FunctionComponent<{}> = () => {
       returnDate &&
       departureDate &&
       lastName &&
-      createBooking(body)) ||
+      createBooking(body).then(() => {
+        setNotification("Successfully added.")
+        const inputs = document.querySelectorAll<HTMLInputElement>(
+          ".booking-form-input"
+        )
+        Array.from(inputs).forEach((input) => (input.value = ""))
+        onChangeHandlers.forEach(({ handler }) => handler(""))
+      })) ||
       setFormError("All fields are required.")
   }
 
@@ -96,6 +114,9 @@ const BookingForm: React.FunctionComponent<{}> = () => {
         <div className="form-error-message">{error || formError}</div>
       ) : (
         ""
+      )}
+      {notification && (
+        <div className="booking-form-notification">{notification}</div>
       )}
     </form>
   )

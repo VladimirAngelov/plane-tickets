@@ -32,6 +32,10 @@
   font-weight: 600;
 }
 
+.booking-form .booking-form-notification {
+  color: green;
+}
+
 .booking-form .booking-form-select-wrapper {
   position: relative;
 }

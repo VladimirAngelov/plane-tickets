@@ -10,6 +10,14 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   position: relative;
 
+  @media (max-width: 40em) {
+    max-width: 16em;
+
+    .card-airports {
+      gap: 3em;
+    }
+  }
+
   .card-names {
     text-align: center;
   }
@@ -37,6 +45,10 @@
     justify-content: space-between;
     align-self: center;
     align-items: center;
+
+    @media (max-width: 40em) {
+      gap: 3em;
+    }
 
     .plane-icon {
       width: 1em;

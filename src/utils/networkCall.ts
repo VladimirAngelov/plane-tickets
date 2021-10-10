@@ -9,7 +9,7 @@ import {
 
 export const API_ENDPOINT: string =
   "https://vm-fe-interview-task.herokuapp.com/api/"
-export const API_KEY: string = "8cEyAfH2CTM5Oec15VttTpUm5ZCFBO"
+const API_KEY = process.env.REACT_APP_API_KEY
 export const GET_AIRPORTS: string = `${API_ENDPOINT}airports?api_key=${API_KEY}`
 export const GET_BOOKINGS: string = `${API_ENDPOINT}bookings?authToken=${API_KEY}`
 export const ADD_BOOKING: string = `${API_ENDPOINT}bookings/create?authToken=${API_KEY}`

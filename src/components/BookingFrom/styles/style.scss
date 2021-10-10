@@ -1,5 +1,4 @@
 .booking-form {
-  //   background: red;
   max-width: 32em;
   width: 100%;
   display: flex;
@@ -24,6 +23,10 @@
   .form-error-message {
     color: rgb(204, 43, 43);
     font-weight: 600;
+  }
+
+  .booking-form-notification {
+    color: green;
   }
 
   .booking-form-select-wrapper {
