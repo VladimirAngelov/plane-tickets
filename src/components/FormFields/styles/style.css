@@ -1,0 +1,44 @@
+select {
+  width: 100%;
+  background: transparent;
+}
+
+select:focus {
+  outline: none;
+}
+
+input {
+  width: 90%;
+  font-size: 1em;
+  background: transparent;
+}
+
+@media (max-width: 40em) {
+  input {
+    width: 80%;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+.booking-form-input,
+.booking-form-select {
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-bottom: 2px solid #4acfda;
+}
+
+.booking-form-input-wrapper {
+  position: relative;
+}
+
+.booking-form-placeholder {
+  color: #757575;
+  margin-bottom: 0.75em;
+}
+/*# sourceMappingURL=style.css.map */

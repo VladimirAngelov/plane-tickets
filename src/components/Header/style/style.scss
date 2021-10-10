@@ -1,0 +1,12 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .app-title {
+    color: #000;
+    letter-spacing: 0.2em;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}

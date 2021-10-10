@@ -1,0 +1,11 @@
+.bookings-wrapper {
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+
+  .bookings-heading {
+    letter-spacing: 0.2em;
+  }
+}

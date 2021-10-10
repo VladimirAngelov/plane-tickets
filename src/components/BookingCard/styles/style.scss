@@ -1,0 +1,51 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 34em;
+  width: 100%;
+  padding: 1em 2em 2em 2em;
+  border-left: 4px solid #4acfda;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+
+  .card-names {
+    text-align: center;
+  }
+
+  .delete-button {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    .close-icon {
+      width: 4em;
+      height: 4em;
+    }
+  }
+
+  .card-airports {
+    display: flex;
+    margin-top: 1em;
+    gap: 6em;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+
+    .plane-icon {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  .card-date {
+    color: #a5a5a5;
+    margin-top: 0.375em;
+  }
+}

@@ -1,0 +1,19 @@
+.app-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.app-header .app-title {
+  color: #000;
+  letter-spacing: 0.2em;
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/*# sourceMappingURL=style.css.map */

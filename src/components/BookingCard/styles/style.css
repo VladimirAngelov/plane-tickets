@@ -1,0 +1,67 @@
+.card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 34em;
+  width: 100%;
+  padding: 1em 2em 2em 2em;
+  border-left: 4px solid #4acfda;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+}
+
+.card-wrapper .card-names {
+  text-align: center;
+}
+
+.card-wrapper .delete-button {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card-wrapper .delete-button .close-icon {
+  width: 4em;
+  height: 4em;
+}
+
+.card-wrapper .card-airports {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+  gap: 6em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-wrapper .card-airports .plane-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.card-wrapper .card-date {
+  color: #a5a5a5;
+  margin-top: 0.375em;
+}
+/*# sourceMappingURL=style.css.map */
