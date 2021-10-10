@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react"
 import store from "../store"
 import { setAirports } from "../store/actions/airportsAction"
 import {
@@ -29,14 +30,30 @@ export const getBookings = (page: number) => {
     .catch(() => store.dispatch(setError("Something went wrong.")))
 }
 
-export const createBooking = (body: object) => {
+export const createBooking = (
+  body: object,
+  setNotification: Dispatch<SetStateAction<string>>,
+  onChangeHandlers: Array<{
+    name: string
+    handler: Dispatch<SetStateAction<string>>
+  }>
+) => {
   return fetch(ADD_BOOKING, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   })
     .then((res) => res.json())
-    .then((res) => store.dispatch(addBooking(res)))
+    .then((res) => {
+      store.dispatch(addBooking(res))
+      store.dispatch(setError(""))
+      const inputs = document.querySelectorAll<HTMLInputElement>(
+        ".booking-form-input"
+      )
+      Array.from(inputs).forEach((input) => (input.value = ""))
+      onChangeHandlers.forEach(({ handler }) => handler(""))
+      setNotification("Successfully added.")
+    })
     .catch(() => store.dispatch(setError("Make sure the dates are correct.")))
 }
 

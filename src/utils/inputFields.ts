@@ -1,6 +1,6 @@
 const today = new Date()
 
-var date =
+const date =
   today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate()
 
 const inputFields = [
@@ -23,7 +23,7 @@ const inputFields = [
   {
     name: "returnDate",
     type: "date",
-    // min: date,
+    min: date,
     placeholder: "Return Date",
   },
 ]

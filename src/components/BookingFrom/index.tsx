@@ -60,14 +60,7 @@ const BookingForm: React.FunctionComponent<{}> = () => {
       returnDate &&
       departureDate &&
       lastName &&
-      createBooking(body).then(() => {
-        setNotification("Successfully added.")
-        const inputs = document.querySelectorAll<HTMLInputElement>(
-          ".booking-form-input"
-        )
-        Array.from(inputs).forEach((input) => (input.value = ""))
-        onChangeHandlers.forEach(({ handler }) => handler(""))
-      })) ||
+      createBooking(body, setNotification, onChangeHandlers)) ||
       setFormError("All fields are required.")
   }
 

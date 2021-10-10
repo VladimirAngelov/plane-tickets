@@ -27,10 +27,10 @@ const FormFields: React.FunctionComponent<FieldsProps> = ({
 }) => {
   const renderedFields = fields.map((field) => {
     const currentHandler: any = onChangeHandlers.find(
-      (h) => h.name === field.name
+      (handler) => handler.name === field.name
     )
     let currentValue: any | undefined = inputValues.find(
-      (v) => v.name === field.name
+      (value) => value.name === field.name
     )
 
     return (
